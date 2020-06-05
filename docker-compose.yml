@@ -2,7 +2,7 @@ version: "2.3"
 
 services:
   app:
-    build: .
+    image: yurireis/microservices:laravel
     container_name: app
     environment:
       - DB_HOST=db
@@ -17,7 +17,7 @@ services:
       - app-network
 
   nginx:
-    build: .docker/nginx
+    image: yurireis/microservices:nginx
     depends_on:
       - app
     container_name: nginx
