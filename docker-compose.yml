@@ -1,4 +1,4 @@
-version: "2.3"
+version: "3"
 
 services:
   app:
@@ -8,8 +8,7 @@ services:
       - DB_HOST=db
       - REDIS_HOST=redis
     depends_on:
-      db:
-        condition: service_healthy
+      - db
     restart: always
     volumes:
       - .:/var/www
@@ -17,11 +16,16 @@ services:
       - app-network
 
   nginx:
-    build: .docker/nginx
+    build: ./.docker/nginx
+    entrypoint: dockerize -template ./.docker/nginx/nginx.tmpl:/etc/nginx/conf.d/nginx.conf ./.docker/nginx/entrypoint.sh
     depends_on:
       - app
     container_name: nginx
     restart: always
+    environment:
+      - APP_HOST=app
+      - APP_PORT=80
+      - APP_FPM=9000
     tty: true
     ports:
       - "80:80"
