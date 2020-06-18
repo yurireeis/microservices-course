@@ -2,6 +2,11 @@
 
 ## Como começar?
 
+Primeiramente, você terá que ter as pastas de dependências disponíveis (vendor, node_modules, etc). Então, é necessário rodar os comandos:
+
+```composer install```
+```npm i```
+
 ### Branch master
 
 Nesta branch, os serviços **app** e **nginx** estão configurados para fazer o build. Ou seja, a imagem será construída através de um dockerfile. Deverão ser feitos os seguintes comandos:
