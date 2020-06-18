@@ -33,4 +33,7 @@ Após a imagem estar em pé, deverá ser feito a execução dos comandos abaixo,
 ## Link das imagens (Docker Hub)
 
 [Imagem Laravel](https://hub.docker.com/layers/yurireis/microservices/laravel/images/sha256-b574c0cbd685df8f7060fe17c812d6b0c79b437633f14e7d57aa0b060f5ec94a?context=repo)
+
 [Imagem Nginx](https://hub.docker.com/layers/yurireis/microservices/nginx/images/sha256-8357f751e71eb1a75a83124524bb7080d2a5fe684d257840ecc575b5c7123192?context=repo)
+
+[Hello World com Golang / Imagem <= 2 mb](https://hub.docker.com/layers/yurireis/codeeducation/latest/images/sha256-cc235fca4df565ab6d2d8df5c6309ec156cb9df1a52e66883f74146043c139a4?context=repo)
